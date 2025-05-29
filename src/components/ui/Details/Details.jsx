@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ProductContext } from "../../../context/context";
 import banner from "../../../assets/images/shopSingle.png";
@@ -13,6 +13,9 @@ const Details = () => {
   const { dataProduct, basket, setBasket } = useContext(ProductContext);
   const [quantity, setQuantity] = useState(1);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   if (!dataProduct.length) {
     return (
       <div className="container">
@@ -33,7 +36,7 @@ const Details = () => {
 
   const itemInBasket = basket.find((el) => el._id === selected._id);
 
- const QuantityClick = (value) => {
+  const QuantityClick = (value) => {
     if (value < 1) return;
     setQuantity(value);
   };

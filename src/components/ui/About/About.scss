@@ -123,7 +123,6 @@
     }
   }
 
-  /* Планшеты (≤ 992px) */
   @media (max-width: 992px) {
     .about-content {
       gap: 30px;
@@ -140,7 +139,6 @@
     }
   }
 
-  /* Планшеты (≤ 768px) */
   @media (max-width: 768px) {
     padding: 20px 0;
 
@@ -192,7 +190,6 @@
     }
   }
 
-  /* Мобильные (≤ 480px) */
   @media (max-width: 480px) {
     .about-banner {
       height: 200px;

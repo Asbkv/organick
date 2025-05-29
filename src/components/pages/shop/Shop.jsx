@@ -1,12 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ProductContext } from "../../../context/context";
 import ShopBg from "../../../assets/images/ShopBg.png";
 import ProductCard from "../../ui/productCard/ProductCard";
-import "./Shop.scss"
+import "./Shop.scss";
 import Newsletter from "../../ui/About/Newsletter";
 
 const Shop = () => {
   const { dataProduct } = useContext(ProductContext);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div id="shop">
       <div
@@ -26,7 +30,7 @@ const Shop = () => {
             </div>
           </div>
         </div>
-      <Newsletter/>
+        <Newsletter />
       </div>
     </div>
   );

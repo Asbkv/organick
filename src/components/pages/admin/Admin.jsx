@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Admin.scss";
 import axios from "axios";
 import { ProductContext } from "../../../context/context";
@@ -66,6 +66,10 @@ const Admin = () => {
     setProductPrice("");
     setProductCategory("");
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div id="admin">

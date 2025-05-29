@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HomeBg from "../../../assets/images/home-img.jpg";
 import welcomeTitle from "../../../assets/images/Natural Food.svg";
 import "./MainWelcome.scss";
 import { FaArrowCircleRight } from "react-icons/fa";
 
 const MainWelcome = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section
       id="welcome"

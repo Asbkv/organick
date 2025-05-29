@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import contactBanner from "../../../assets/images/Banner-contact.png";
 import contact1 from "../../../assets/images/contact1.jpg";
 import contact2 from "../../../assets/images/contact2.jpg";
@@ -23,6 +23,10 @@ const Contact = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [modal, setModal] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   function validateForm() {
     if (!name || !email || !company || !subject || !message) {
@@ -244,31 +248,41 @@ const Contact = () => {
             </button>
           </div>
 
-     {modal && (
-  <div className="modal-overlay">
-    <div className="modal">
-      <h1>Подтверждение данных</h1>
-      <div className="modal-content">
-        <p><strong>Имя:</strong> {name}</p>
-        <p><strong>Email:</strong> {email}</p>
-        <p><strong>Компания:</strong> {company}</p>
-        <p><strong>Тема:</strong> {subject}</p>
-        <p><strong>Сообщение:</strong> {message}</p>
-      </div>
-      <div className="modal-actions">
-        <button onClick={() => setModal(false)}>Отменить</button>
-        <button onClick={productSubmit}>Подтвердить отправку</button>
-      </div>
-      <button 
-        className="modal-close" 
-        onClick={() => setModal(false)}
-        aria-label="Закрыть"
-      >
-        &times;
-      </button>
-    </div>
-  </div>
-)}
+          {modal && (
+            <div className="modal-overlay">
+              <div className="modal">
+                <h1>Подтверждение данных</h1>
+                <div className="modal-content">
+                  <p>
+                    <strong>Имя:</strong> {name}
+                  </p>
+                  <p>
+                    <strong>Email:</strong> {email}
+                  </p>
+                  <p>
+                    <strong>Компания:</strong> {company}
+                  </p>
+                  <p>
+                    <strong>Тема:</strong> {subject}
+                  </p>
+                  <p>
+                    <strong>Сообщение:</strong> {message}
+                  </p>
+                </div>
+                <div className="modal-actions">
+                  <button onClick={() => setModal(false)}>Отменить</button>
+                  <button onClick={productSubmit}>Подтвердить отправку</button>
+                </div>
+                <button
+                  className="modal-close"
+                  onClick={() => setModal(false)}
+                  aria-label="Закрыть"
+                >
+                  &times;
+                </button>
+              </div>
+            </div>
+          )}
 
           <Newsletter />
         </div>
