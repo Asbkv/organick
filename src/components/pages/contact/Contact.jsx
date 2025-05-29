@@ -73,7 +73,7 @@ const Contact = () => {
         sacMesage();
       })
       .catch((error) => {
-        toast.error("🦄 Error sending message!", {
+        toast.error("Ошибка отправки сообщения!", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -88,7 +88,7 @@ const Contact = () => {
   }
 
   const sacMesage = () => {
-    toast.success("🦄 Message sent successfully!", {
+    toast.success("Данные успешно отправлены!!", {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
