@@ -30,7 +30,7 @@ const Contact = () => {
 
   function validateForm() {
     if (!name || !email || !company || !subject || !message) {
-      toast.error("🦄 Please fill all required fields!", {
+      toast.error("Пожалуйста, заполните все обязательные поля!", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
