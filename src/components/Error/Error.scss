@@ -1,0 +1,39 @@
+#error {
+  .errorTitle {
+    position: relative;
+  }
+  .error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 120px;
+    right: 220px;
+    h1 {
+      font-weight: 800;
+      font-size: 50px;
+      color: #274c5b;
+    }
+    p {
+      font-weight: 600;
+      font-size: 15px;
+      color: #525c60;
+      margin-top: 10px;
+    }
+    button {
+        margin-right: 180px;
+      margin-top: 35px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      padding: 20px 30px;
+      border-radius: 20px;
+      color: white;
+      background: #274c5b;
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+}

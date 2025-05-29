@@ -1,0 +1,14 @@
+#shop {
+  padding: 20px 0;
+  .shop {
+    &--product {
+      &__cards {
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+    }
+  }
+}

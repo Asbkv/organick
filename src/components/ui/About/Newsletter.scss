@@ -1,0 +1,144 @@
+.contact--block6 {
+  padding: 20px 0;
+  margin: 2rem 0;
+  position: relative;
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: 250px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+
+      p {
+        padding: 0;
+        font-weight: 800;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 20px;
+        line-height: 1.3;
+      }
+
+      .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 100%;
+
+        input {
+          padding: 12px 15px;
+          border: none;
+          border-radius: 12px;
+          font-size: 14px;
+          width: 100%;
+          color: #333;
+
+          &::placeholder {
+            color: #999;
+          }
+        }
+
+        button {
+          padding: 12px 20px;
+          background: #274c5b;
+          color: white;
+          border: none;
+          border-radius: 12px;
+          font-weight: 600;
+          font-size: 16px;
+          cursor: pointer;
+          transition: all 0.3s;
+          width: 100%;
+
+          &:hover {
+            background: darken(#274c5b, 10%);
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .contact--block6 {
+    padding: 30px 0;
+    margin: 3rem 0;
+
+    .image-container {
+      border-radius: 25px;
+
+      img {
+        height: 300px;
+      }
+
+      .text-overlay {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+        background: rgba(0, 0, 0, 0.3);
+
+        p {
+          font-size: 36px;
+          text-align: left;
+          margin-bottom: 0;
+          padding-left: 20px;
+        }
+
+        .newsletter-form {
+          flex-direction: row;
+          max-width: 450px;
+
+          input {
+            padding: 14px 20px;
+            font-size: 16px;
+          }
+
+          button {
+            padding: 14px 25px;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .contact--block6 {
+    .image-container {
+      img {
+        height: 350px;
+      }
+
+      .text-overlay {
+        p {
+          font-size: 45px;
+          padding-left: 40px;
+        }
+      }
+    }
+  }
+}

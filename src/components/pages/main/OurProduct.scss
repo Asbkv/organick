@@ -1,0 +1,143 @@
+#ourProduct {
+  padding: 30px 0;
+
+  .ourProductTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+    text-align: center;
+
+    h1 {
+      font-weight: 800;
+      font-size: 32px;
+      color: #274c5b;
+      margin-top: 15px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .ourProduct {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+
+    > * {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.5s ease forwards;
+
+      @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+          animation-delay: 0.05s * $i;
+        }
+      }
+    }
+  }
+
+  .btn {
+    margin: 30px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 30px;
+    border-radius: 12px;
+    background: #274c5b;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 0.8s ease 1s forwards;
+    width: fit-content;
+
+    &:hover {
+      background: darken(#274c5b, 10%);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(5px);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #ourProduct {
+    padding: 40px 0;
+
+    .ourProductTitle {
+      margin-bottom: 40px;
+
+      h1 {
+        font-size: 40px;
+      }
+    }
+
+    .ourProduct {
+      gap: 30px;
+    }
+
+    .btn {
+      padding: 25px 35px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #ourProduct {
+    padding: 50px 0;
+
+    .ourProductTitle h1 {
+      font-size: 50px;
+    }
+
+    .ourProduct {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .btn {
+      padding: 30px 40px;
+      font-size: 22px;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
