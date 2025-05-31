@@ -40,9 +40,12 @@ const Basket = () => {
           <div className="basket--block">
             {basket.map((el) => (
               <div className="basket--block__card">
+                <div className="basket--block__card--text">
+
                 <h2>{el.category}</h2>
                 <img src={el.url} alt="img" />
                 <h1>{el.name}</h1>
+                </div>
                 <h3> {(el.price * el.count).toFixed(2)} сом</h3>
 
                 <div className="basket--block__card--btn">
