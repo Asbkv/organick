@@ -27,7 +27,7 @@ const Basket = () => {
     });
     localStorage.setItem("basket", JSON.stringify(changeBacket));
     setBasket(changeBacket);
-  }
+  } 
 
   const totalSum = basket.reduce((acc, item) => {
     return acc + item.price * item.count;
